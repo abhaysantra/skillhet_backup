@@ -1,0 +1,87 @@
+{% load staticfiles %}
+{% include 'header.html' %}
+<section class="">
+<div class="ttm-page-title-row">
+            <div class="ttm-page-title-row-bg-layer ttm-bg-layer"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12"> 
+                        <div class="title-box ttm-textcolor-white">
+                            <div class="page-title-heading">
+                                <h1 class="title">About Us</h1>
+                            </div><!-- /.page-title-captions -->
+                            <div class="breadcrumb-wrapper">
+                                <span>
+                                    <a title="Homepage" href="{% url 'index' %}"><i class="ti ti-home"></i></a>
+                                </span>
+                                <span class="ttm-bread-sep">&nbsp; / &nbsp;</span>
+                                <span><span>About Us</span></span>
+                            </div>  
+                        </div>
+                    </div><!-- /.col-md-12 -->  
+                </div><!-- /.row -->  
+            </div><!-- /.container -->                      
+        </div>
+</section>
+
+
+<section class="ttm-row about3-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5 col-sm-12">
+                        <!-- ttm_single_image-wrapper -->
+                        <div class="ttm_single_image-wrapper mb-35 about_img">
+                          <div class="abt_pic"> 
+                           <img class="img-fluid" src="{{ about.1.image1.url }}" alt="">
+                          </div>
+                           <div class="md_pic">
+                           	<img src="{{ about.1.image2.url }}" alt="">
+                           </div>
+                        </div><!-- ttm_single_image-wrapper end -->
+                    </div>
+                    <div class="col-lg-7 col-sm-12">
+                        <div class="pl-20">
+                            <!-- section title -->
+                            <div class="section-title clearfix">
+                                <div class="title-header">
+                                    <h5>{{ about.1.first_title }}</h5>
+                                    <h2 class="title">{{ about.1.second_title }}</h2>
+                                </div>
+                            </div><!-- section title end -->
+                            {{ about.1.content | safe }}
+                            <span><img src="{{ about.1.signature.url }}" alt="ttm_single_image-wrapper"></span>
+                        </div>
+                    </div>
+                </div><!-- row end-->
+            </div>
+        </section>
+
+
+        <section class="abt_core_values">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-5">
+                        <div><img src="{{ core.0.image.url }}"></div>
+                    </div>
+                    <div class="col-md-7">
+                        <div class="title-header">
+                                    <h5>{{ core.0.first_title }}</h5>
+                                    <h2 class="title">{{ core.0.second_title }}</h2>
+                                </div>
+                                {{ core.0.content }}
+                        <ul>
+                    <li>
+                       <p><span><i class="fa fa-check-square-o icon_right"></i></span>{{ core.0.small_content1 }}</p></li>
+                     <li>
+                        <p><span><i class="fa fa-check-square-o icon_right"></i></span>{{ core.0.small_content2 }}</p></li>
+                      <li>
+                     <p><span><i class="fa fa-check-square-o icon_right"></i></span>{{ core.0.small_content3 }}</p></li>
+                      
+                </ul>   
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+{% include 'footer.html' %}
